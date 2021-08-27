@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sizeArr = +prompt("kich thuoc cua mang la: ")
+    let iptArr = [];
+    for (let i = 1; i <= sizeArr; i++) {
+        iptArr[i] = prompt("phan tu thu " + i + "cua mang la: ")
+    }
+    let count = 0;
+    for (let j = 1; j <= sizeArr; j++) {
+        if (iptArr[j] % 1 === 0) {
+            count = count + 1;
+        }
+    }
+    alert("so chu so trong mang la: " + count)
+
+</script>
+</body>
+</html>

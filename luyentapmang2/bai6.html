@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("chuoi cua ban la: ");
+    let Arr = str.split(" ");
+    for (let i = 0; i < Arr.length; i++) {
+        if (Arr[i] === "-") {
+            Arr[i] = "_"
+        }
+    }
+    document.write(Arr.join( " "))
+</script>
+</body>
+</html>

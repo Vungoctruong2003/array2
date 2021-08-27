@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let str1 = prompt("chuoi thu nhat cua ban la: ");
+    let Arr1 = str1.split(" ");
+    let str2 = prompt(" chuoi thu hai cua ban la: ");
+    let Arr2 = str2.split(" ");
+    let check = true;
+    if (Arr1.length === Arr2.length) {
+        for (i = 0; i < Arr1.length; i++) {
+            if (Arr1[i] !== Arr2[i]) {
+                check = false;
+            }
+        }
+    } else {
+        check = false
+    }
+    if (check === false) {
+        alert(" hai cai khong bang nhau")
+    } else {
+        alert(" hai cai bang nhau")
+    }
+
+
+</script>
+</body>
+</html>
