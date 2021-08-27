@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [1,2,4,5,7,66,34,23,13,45,63,23,25,9,10]
+  let ipt = +prompt("so ban nhap vao la: ")
+  let check = false;
+  for (let i=0; i<arr.length; i++){
+      if (ipt === arr[i]){
+          check = true;
+          alert("V is in the array")
+          break;
+      }
+  }
+  if (check === false){
+      alert("V is not in the array");
+  }
+
+</script>
+</body>
+</html>
