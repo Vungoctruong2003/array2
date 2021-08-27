@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="iptWord">
+<button onclick="letLookup()"> Tìm kiếm</button>
+<p id="showResult"></p>
+
+</body>
+<script>
+    let wordEng = ["love", "hate", "bean", "good", "handsome"]
+    let wordVie = ["yêu", "ghét", "hạtđậu", "tốt", "đẹptrai"]
+    let ipt = document.getElementById("iptWord").value;
+
+
+    function letLookup() {
+        let check = true;
+        for (let i = 0; i < wordEng.length; i++) {
+            if (i === +ipt) {
+                check = false;
+                document.getElementById("showResult").innerHTML = " từ bạn cần tìm có nghĩa tiếng Việt là : " + wordVie[i]
+                break;
+            }
+        }
+        if (check===true){
+            document.getElementById("showResult").innerHTML = " khong tim thay"
+        }
+    }
+</script>
+</html>
