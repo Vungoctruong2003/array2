@@ -7,32 +7,29 @@
 <body>
 <h2> Type anthing slowly</h2>
 <form name="f">
-    <textarea cols="30" rows="10" onkeydown="typeTextarea()" name="txt">  </textarea>
+    <textarea cols="45" rows="15" onkeydown="typeTextarea()" id="showRs">  </textarea>
 </form>
 
 <script>
-    var a= new Array(),n="";
-    a[1]='T';a[2]='R';a[3]='Ư';a[4]='Ở';a[5]='N';a[6]='G';a[7]=' ';a[8]='Đ';a[9]='Ẹ';a[10]='P';a[11]=' ';a[12]='T';a[13]='R';a[14]='A';a[15]='I';a[16]=' ';a[17]='Q';a[18]='U';a[19]='Á';a[20]='!';a[21]='!';a[22]='!';
-    function typeTextarea(){
-        t = document.f.txt.value;
-        j = t.length;
-        if(j > 0)
-        {
-            for(var i=1; i<=j; i++)
-            {
-                n = n + a[i];
-                if(i ===22)
-                {
-                    document.f.txt.value = "";
-                    n = "";
-                }
-            }
-        }
-        document.f.txt.value = n;
-        n="";
-        setTimeout("typeTextarea()",1);
+   let strIpt = "Anh Trưởng đẹp trai quá . . . . A! A! A! . . . <3";
+   let arr = strIpt.split("");
+   let strBegin = ""
+    let i=0;
+   function typeTextarea() {
 
-    }
+       if (i === arr.length){
+           i =0;
+           strBegin = "";
+       }
+       strBegin = strBegin + arr[i];
+       document.getElementById("showRs").value = strBegin;
+       i++
+       }
+
+
+
+
+
 </script>
 
 </body>
